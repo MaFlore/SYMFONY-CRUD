@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div style="margin:20px">
+
+		<br><a class="btn btn-success" href="/add">Ajouter un livre</a>
+
+	</div>
+
+	<div class="example-wrapper">
+		<table class="table">
+			<thead class="table-primary">
+				<tr>
+					<th style="text-align:center">index</th>
+					<th style="text-align:center">Nom livre</th>
+					<th style="text-align:center">Auteur livre</th>
+					<th style="text-align:center">Reference</th>
+                    <th style="text-align:center">Ouvrage</th>
+                    <th style="text-align:center">Annee de publication</th>
+					<th style="text-align:center">Actions</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				{% for livre in livres %}
+					<tr>
+
+						<td style="text-align:center">{{loop.index}}</td>
+						<td style="text-align:center">{{livre.nomLivre}}</td>
+						<td style="text-align:center">{{livre.auteurLivre}}</td>
+                        <td style="text-align:center">{{livre.reference}}</td>
+                        <td style="text-align:center">{{livre.ouvrage}}</td>
+                        <td style="text-align:center">{{livre.getAnneePublication()|date('d-m-Y')}}</td>
+						<td style="text-align:center">
+                            <a class="btn btn-warning" href="/update/{{livre.id}}">Modifier</a>
+							<a class="btn btn-danger" href="/delete/{{livre.id}}">Supprimer</a>
+						</td>
+
+
+					</tr>
+				{% endfor %}
+
+
+			</tbody>
+		</table>
+
+
+	</div>
+{% endblock %}
