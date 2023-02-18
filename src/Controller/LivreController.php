@@ -32,7 +32,7 @@ class LivreController extends AbstractController
             $em ->flush();
             return $this->redirectToRoute('app_livres');
         }
-        return $this->render('livre/addLivre.html.twig',array(
+        return $this->render('livre/ajouterLivre.html.twig',array(
             'form'=>$form->createView()
         ));
     }
