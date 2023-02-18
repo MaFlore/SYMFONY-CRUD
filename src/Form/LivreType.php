@@ -14,11 +14,11 @@ class LivreType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nomLivre',TextType::class, [ "attr" => ["class" => "form-control"] ])
-            ->add('auteurLivre',TextType::class, [ "attr" => ["class" => "form-control"] ])
-            ->add('reference',TextType::class, [ "attr" => ["class" => "form-control"] ])
-            ->add('ouvrage',TextType::class, [ "attr" => ["class" => "form-control"] ])
-            ->add('anneePublication',DateType::class,[ "attr" => ["class" => "form-control"] ])
+            ->add('nomLivre', TextType::class)
+            ->add('auteurLivre', TextType::class)
+            ->add('reference', TextType::class)
+            ->add('ouvrage', TextType::class)
+            ->add('anneePublication', DateType::class)
         ;
     }
 
