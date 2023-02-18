@@ -10,7 +10,8 @@ Pour lancer ce code sur votre machine, vous devez :
 2. Installer composer téléchargeable sur ce lien : **https://getcomposer.org/Composer-Setup.exe**
 3. Installer en dezippant le dossier zippé de **symfony cli** disponible sur le lien : **https://github.com/symfony-cli/symfony-cli/releases/download/v5.5.0/symfony-cli_windows_amd64.zip**, ensuite ajouter le lien vers le repertoire dans votre variable d'environnement
 4. Ensuite, pour continuer vous devez aussi installer **gitbash** téléchargeable sur ce lien : **https://git-scm.com/download/win**
-5. Clonez le projet une fois l'installation terminé en exécutant la commande : **git clone https://github.com/MaFlore/SYMFONY-CRUD.git** ![1](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/git-clone.png)
+5. Clonez le projet une fois l'installation terminé en exécutant la commande : 
+*git clone https://github.com/MaFlore/SYMFONY-CRUD.git* ![1](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/git-clone.png)
 6. Une fois le clone terminé, mettez vous dans le repertoire du projet ![2](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/repertoire-symfony-crud.png) en :
 7. Installant les dépendances du projet avec la commande : ***composer install** ou **composer update** ![3](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/composer-install.png)
 8. Mettez vous dans le fichier .env du projet pour configurer la connexion à la base de donnée comme suit : ![4](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/env.png)
