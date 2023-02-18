@@ -27,7 +27,31 @@
                         <td>{{livre.getAnneePublication()|date('d-m-Y')}}</td>
 						<td>
                             <a class="btn rounded-pill btn-warning" href="{{url('app_modifier_livre', {'id':livre.id})}}">Modifier</a>
-							<a class="btn rounded-pill btn-danger" href="{{url('app_supprimer_livre', {'id':livre.id})}}">Supprimer</a>
+							<a class="btn rounded-pill btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">Supprimer</a>
+							<div class="modal" id="myModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+
+									<!-- Modal Header -->
+									<div class="modal-header">
+										<h4 class="modal-title">Suppression d'un livre</h4>
+									</div>
+
+									<!-- Modal body -->
+									<div class="modal-body">
+										Cette action est irréversible !
+										Voulez-vous supprimer ce livre ?
+									</div>
+
+									<!-- Modal footer -->
+									<div class="modal-footer">
+										<a class="btn rounded-pill btn-danger" href="{{url('app_supprimer_livre', {'id':livre.id})}}">Confirmez</a>
+										<a class="btn btn-secondary" data-bs-dismiss="modal">Annuler</a>
+									</div>
+
+									</div>
+								</div>
+							</div>
 						</td>
 					</tr>
 				{% endfor %}
