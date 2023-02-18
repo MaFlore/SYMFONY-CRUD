@@ -47,7 +47,7 @@ class LivreController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('app_livres');
         }
-        return $this->render('livre/updateLivre.html.twig',array(
+        return $this->render('livre/modifierLivre.html.twig',array(
             'form'=>$form->createView()
         ));
     }
