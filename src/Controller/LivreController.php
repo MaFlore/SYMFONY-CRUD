@@ -15,8 +15,8 @@ class LivreController extends AbstractController
 
     #[Route("/",name: "app_livres")]
     public function livres(LivreRepository $livreRepository){
-        $livres=$livreRepository->findAll();
-        return $this->render('livre/listLivre.html.twig',array(
+        $livres = $livreRepository->findAll();
+        return $this->render('livre/listesLivres.html.twig',array(
             'livres'=>$livres
         ));
      }
@@ -24,8 +24,8 @@ class LivreController extends AbstractController
     #[Route('/ajouter', name: 'app_ajouter_livre')]
     public function ajouterLivre(Request $request, EntityManagerInterface $em)
     {
-        $livre=new Livre(); 
-        $form=$this->createForm(LivreType::class, $livre);
+        $livre = new Livre(); 
+        $form = $this->createForm(LivreType::class, $livre);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){ 
             $em ->persist($livre);
@@ -41,7 +41,7 @@ class LivreController extends AbstractController
     #[Route("/modifier/{id<\d+>}", name: "app_modifier_livre")]
     public function modifierLivre(Request $request, Livre $livre, EntityManagerInterface $em)
     {
-        $form=$this->createForm(LivreType::class, $livre);
+        $form = $this->createForm(LivreType::class, $livre);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
             $em->flush();
