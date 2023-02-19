@@ -28,7 +28,7 @@ Pour lancer ce code sur votre machine, vous devez :
 # MANUEL D'UTILISATION
 
 Une fois le serveur lancé avec la commande *symfony server:start*, dirigé vous sur l'adresse donnée dans votre invite de commande.
-Adresse dans notre cas ici : *http://127.0.0.1:8000*
+Adresse dans notre cas ici : *https://127.0.0.1:8000*
 1. Entrons cette adresse dans notre navigation, on aura la liste de tous les livres disponibles dans notre base de données
 ![8](https://github.com/MaFlore/SYMFONY-CRUD/blob/main/livres.png)
 2. Maintenant cliquons sur le bouton *Ajouter*, nous aurons un formulaire d'ajout d'un livre
